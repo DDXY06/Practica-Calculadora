@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
@@ -60,7 +59,7 @@ fun Calculator(modifier: Modifier = Modifier) {
                 Row(Modifier.weight(1f).fillMaxWidth()){
                     NumberButton("4", onClick = {numBarra += "1"}, Modifier.weight(1f), true)
                     NumberButton("1", onClick = {numBarra += "2"}, Modifier.weight(1f), true)
-                    NumberButton("3", onClick = {numBarra += "3"}, Modifier.weight(1f), true)
+                    NumberButton("2", onClick = {numBarra += "3"}, Modifier.weight(1f), true)
                 }
                 Row(Modifier.weight(1f).fillMaxWidth()){
                     NumberButton("0", onClick = {numBarra += "4"}, Modifier.weight(1f), true)
@@ -69,7 +68,7 @@ fun Calculator(modifier: Modifier = Modifier) {
                 }
                 Row(Modifier.weight(1f).fillMaxWidth()){
                     NumberButton("6", onClick = {numBarra += "7"}, Modifier.weight(1f), true)
-                    NumberButton("2", onClick = {numBarra += "8"}, Modifier.weight(1f), true)
+                    NumberButton("3", onClick = {numBarra += "8"}, Modifier.weight(1f), true)
                     NumberButton("8", onClick = {numBarra += "9"}, Modifier.weight(1f), true)
                 }
                 Row(Modifier.weight(1f).fillMaxWidth()){
@@ -155,7 +154,7 @@ fun NumberTextField(numBarra: String, onValueChange: (String) -> Unit, modifier:
     OutlinedTextField(numBarra, onValueChange = onValueChange,
         singleLine = true,
         readOnly = true,
-        label = { Text("Número") },
+        label = { Text("Número", fontSize = 20.sp) },
         modifier = modifier)
 }
 
